@@ -8,7 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController,ViewModelBindable {
+class HomeViewController: UIViewController, ViewModelBindable, Alertable {
+    
+    var indicatorView: IndicatorView?
     
     typealias ViewModel = HomeViewModel
     var viewModel: HomeViewModel? {
@@ -24,13 +26,30 @@ class HomeViewController: UIViewController,ViewModelBindable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel = HomeViewModel(weatherApi: WeatherApi(networkManager: NetworkManager()), locationService: LocationManager())
+        indicatorView = IndicatorView(view: self.view)
     }
     
     func setupViewModel(with viewModel: HomeViewModel) {
+        viewModel.isLoadingObservable.addObserver { [weak self] (isLoading) in
+            if isLoading {
+                self?.indicatorView?.show()
+            } else {
+                self?.indicatorView?.hide()
+            }
+        }
         
+        viewModel.errorObservable.addObserver { [weak self] (error) in
+            if let error = error {
+                self?.showAlertWith(message: error.localizedDescription, title: "Error")
+            }
+        }
     }
 
+    deinit {
+        viewModel?.isLoadingObservable.removeObserver()
+        viewModel?.errorObservable.removeObserver()
+    }
 
 }
 

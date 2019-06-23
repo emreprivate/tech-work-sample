@@ -44,19 +44,33 @@ class HomeViewModel: NSObject {
     }
     
     private func makeRequestWithCoordinates(lat: Double, lon: Double) {
+        
+        let dispatchGroup = DispatchGroup()
+        isLoadingObservable.value = true
+        
+        dispatchGroup.enter()
         self.weatherApi.getWeatherByCoordinates(lat: lat, lon: lon) { [weak self] (weatherResponse, error) in
             self?.errorObservable.value = error
             self?.weatherObservable.value = weatherResponse
+            dispatchGroup.leave()
         }
         
+        dispatchGroup.enter()
         self.weatherApi.getForecastByCoordinates(lat: lat, lon: lon) { [weak self] (forecastResponse, error) in
             self?.errorObservable.value = error
             self?.forecastObservable.value = forecastResponse
+            dispatchGroup.leave()
         }
         
+        dispatchGroup.enter()
         self.weatherApi.getDailyForecastByCoordinates(lat: lat, lon: lon) { [weak self] (dailyForecastResponse, error) in
             self?.errorObservable.value = error
             self?.dailyForecastObservable.value = dailyForecastResponse
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) { [weak self] in
+            self?.isLoadingObservable.value = false
         }
     }
 }

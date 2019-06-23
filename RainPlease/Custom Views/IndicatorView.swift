@@ -32,6 +32,7 @@ class IndicatorView  {
         indicator.centerXAnchor.constraint(equalTo: indicatorView.centerXAnchor).isActive = true
         indicator.centerYAnchor.constraint(equalTo: indicatorView.centerYAnchor).isActive = true
         
+        self.hide()
     }
     
     func show() {

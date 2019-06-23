@@ -26,6 +26,7 @@
 		B7EFC90F22BFB7F800FFA64E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC90E22BFB7F800FFA64E /* HomeViewModel.swift */; };
 		B7EFC91222BFBE0400FFA64E /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC91122BFBE0400FFA64E /* IndicatorView.swift */; };
 		B7EFC91422BFBEB500FFA64E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC91322BFBEB500FFA64E /* ViewModelBindable.swift */; };
+		B7EFC91622BFC01500FFA64E /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC91522BFC01500FFA64E /* Alertable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B7EFC90E22BFB7F800FFA64E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B7EFC91122BFBE0400FFA64E /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		B7EFC91322BFBEB500FFA64E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
+		B7EFC91522BFC01500FFA64E /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				B7EFC91322BFBEB500FFA64E /* ViewModelBindable.swift */,
+				B7EFC91522BFC01500FFA64E /* Alertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				B7EFC91222BFBE0400FFA64E /* IndicatorView.swift in Sources */,
 				B7EFC90622BFB79A00FFA64E /* LocationManager.swift in Sources */,
 				B7A6B10B22BE3E12008976C0 /* HomeViewController.swift in Sources */,
+				B7EFC91622BFC01500FFA64E /* Alertable.swift in Sources */,
 				B7EFC8F722BFAC4400FFA64E /* Location.swift in Sources */,
 				B7A6B10922BE3E12008976C0 /* AppDelegate.swift in Sources */,
 				B7EFC8FE22BFB2CB00FFA64E /* WeatherJsonResponse.swift in Sources */,
