@@ -56,6 +56,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayDegreeLabel" destination="xFp-6W-55v" id="Jsm-hm-5NY"/>
+                <outlet property="dayLabel" destination="6bR-po-rnN" id="pqP-cV-hUG"/>
+                <outlet property="iconImageView" destination="ofV-Da-HL4" id="Y4K-lP-LbS"/>
+                <outlet property="nightDegreeLabel" destination="83W-ho-WAK" id="5MA-EP-hkK"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </tableViewCell>
     </objects>

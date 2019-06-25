@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ForecastCollectionViewCell" customModule="RainPlease" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYF-id-cES">
+                        <rect key="frame" x="0.0" y="5" width="100" height="125"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-wD-kgq">
+                                <rect key="frame" x="33" y="12" width="34.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IH6-ix-puX">
+                                <rect key="frame" x="24" y="36" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IH6-ix-puX" secondAttribute="height" id="rDO-SX-TA0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-zf-qZD">
+                                <rect key="frame" x="42.5" y="96" width="15" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.013439465314149857" green="0.65944010019302368" blue="0.994221031665802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IH6-ix-puX" firstAttribute="centerX" secondItem="iYF-id-cES" secondAttribute="centerX" id="00l-m1-2tP"/>
+                            <constraint firstItem="IH6-ix-puX" firstAttribute="top" secondItem="Kbt-wD-kgq" secondAttribute="bottom" constant="8" id="0kZ-q0-bVe"/>
+                            <constraint firstItem="Kbt-wD-kgq" firstAttribute="centerX" secondItem="iYF-id-cES" secondAttribute="centerX" id="3Lm-XR-MwK"/>
+                            <constraint firstItem="kIT-zf-qZD" firstAttribute="top" secondItem="IH6-ix-puX" secondAttribute="bottom" constant="8" id="d3Q-7m-E1V"/>
+                            <constraint firstItem="Kbt-wD-kgq" firstAttribute="top" secondItem="iYF-id-cES" secondAttribute="top" constant="12" id="e1s-y4-1Ew"/>
+                            <constraint firstItem="kIT-zf-qZD" firstAttribute="centerX" secondItem="iYF-id-cES" secondAttribute="centerX" id="hdv-5l-XOo"/>
+                            <constraint firstAttribute="bottom" secondItem="kIT-zf-qZD" secondAttribute="bottom" constant="12" id="ubk-ut-ch8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="iYF-id-cES" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Buc-WM-DdF"/>
+                <constraint firstItem="iYF-id-cES" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="avz-fZ-zRt"/>
+                <constraint firstItem="iYF-id-cES" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="j7k-1S-Xkp"/>
+                <constraint firstItem="iYF-id-cES" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="xy6-zU-cpp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="degreeLabel" destination="kIT-zf-qZD" id="3xW-hp-7mg"/>
+                <outlet property="hourLabel" destination="Kbt-wD-kgq" id="QUs-CZ-bb6"/>
+                <outlet property="iconImageView" destination="IH6-ix-puX" id="vZj-y9-RSN"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.825892857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>

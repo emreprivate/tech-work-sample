@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B79F56CD22C2705200C798F3 /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F56CB22C2705200C798F3 /* DailyForecastTableViewCell.swift */; };
 		B79F56CE22C2705200C798F3 /* DailyForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79F56CC22C2705200C798F3 /* DailyForecastTableViewCell.xib */; };
+		B79F56D222C2754000C798F3 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F56D022C2754000C798F3 /* ForecastCollectionViewCell.swift */; };
+		B79F56D322C2754000C798F3 /* ForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79F56D122C2754000C798F3 /* ForecastCollectionViewCell.xib */; };
 		B7A6B10922BE3E12008976C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B10822BE3E12008976C0 /* AppDelegate.swift */; };
 		B7A6B10B22BE3E12008976C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B10A22BE3E12008976C0 /* HomeViewController.swift */; };
 		B7A6B10E22BE3E12008976C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B10C22BE3E12008976C0 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		B79F56CB22C2705200C798F3 /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
 		B79F56CC22C2705200C798F3 /* DailyForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastTableViewCell.xib; sourceTree = "<group>"; };
+		B79F56D022C2754000C798F3 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		B79F56D122C2754000C798F3 /* ForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7A6B10522BE3E12008976C0 /* RainPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A6B10822BE3E12008976C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A6B10A22BE3E12008976C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		B79F56C922C2700100C798F3 /* ForecastCell */ = {
 			isa = PBXGroup;
 			children = (
+				B79F56D022C2754000C798F3 /* ForecastCollectionViewCell.swift */,
+				B79F56D122C2754000C798F3 /* ForecastCollectionViewCell.xib */,
 			);
 			path = ForecastCell;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				B79F56CC22C2705200C798F3 /* DailyForecastTableViewCell.xib */,
 			);
 			path = DailyForecastCell;
+			sourceTree = "<group>";
+		};
+		B79F56D422C2755000C798F3 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				B7EFC91122BFBE0400FFA64E /* IndicatorView.swift */,
+			);
+			path = Indicator;
 			sourceTree = "<group>";
 		};
 		B7A6B0FC22BE3E12008976C0 = {
@@ -241,9 +255,9 @@
 		B7EFC91022BFBDF600FFA64E /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				B79F56D422C2755000C798F3 /* Indicator */,
 				B79F56CA22C2700900C798F3 /* DailyForecastCell */,
 				B79F56C922C2700100C798F3 /* ForecastCell */,
-				B7EFC91122BFBE0400FFA64E /* IndicatorView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -332,6 +346,7 @@
 				B79F56CE22C2705200C798F3 /* DailyForecastTableViewCell.xib in Resources */,
 				B7A6B11322BE3E13008976C0 /* LaunchScreen.storyboard in Resources */,
 				B7A6B11022BE3E13008976C0 /* Assets.xcassets in Resources */,
+				B79F56D322C2754000C798F3 /* ForecastCollectionViewCell.xib in Resources */,
 				B7A6B10E22BE3E12008976C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +379,7 @@
 				B7EFC90F22BFB7F800FFA64E /* HomeViewModel.swift in Sources */,
 				B7EFC90822BFB7B000FFA64E /* LocationProtocol.swift in Sources */,
 				B7EFC8F422BE635200FFA64E /* Endpoint.swift in Sources */,
+				B79F56D222C2754000C798F3 /* ForecastCollectionViewCell.swift in Sources */,
 				B7EFC8F922BFAEC100FFA64E /* WeatherApi.swift in Sources */,
 				B7EFC90222BFB5E200FFA64E /* DailyForecastJsonResponse.swift in Sources */,
 				B7EFC91422BFBEB500FFA64E /* ViewModelBindable.swift in Sources */,

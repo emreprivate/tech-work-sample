@@ -1,5 +1,5 @@
 //
-//  DailyForecastTableViewCell.swift
+//  ForecastCollectionViewCell.swift
 //  RainPlease
 //
 //  Created by Emre Çelikörs on 25.06.2019.
@@ -8,17 +8,14 @@
 
 import UIKit
 
-class DailyForecastTableViewCell: UITableViewCell {
+class ForecastCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var nightDegreeLabel: UILabel!
-    @IBOutlet weak var dayDegreeLabel: UILabel!
-    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var degreeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
-    
 }
