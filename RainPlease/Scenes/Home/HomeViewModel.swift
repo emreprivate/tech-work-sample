@@ -44,7 +44,6 @@ class HomeViewModel: NSObject {
     }
     
     private func makeRequestWithCoordinates(lat: Double, lon: Double) {
-        
         let dispatchGroup = DispatchGroup()
         isLoadingObservable.value = true
         
