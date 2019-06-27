@@ -15,7 +15,7 @@ struct WeatherJsonResponse: Codable {
     let main: Main?
     let wind: Wind?
     let clouds: Clouds?
-    let dt: Int?
+    let dt: Double?
     let sys: Sys?
     let name: String?
 }
@@ -44,7 +44,7 @@ struct Main: Codable {
 struct Sys: Codable {
     let message: Double?
     let country: String?
-    let sunrise, sunset: Int?
+    let sunrise, sunset: Double?
 }
 
 // MARK: - WeatherElement
@@ -56,6 +56,38 @@ struct WeatherElement: Codable {
         case id, main
         case weatherDescription = "description"
         case icon
+    }
+    
+    func getWeatherImageName() -> String {
+        
+        var imageName = ""
+        guard let id = id else { return "ClearSky" }
+        if id >= 200 && id <= 232 {
+            imageName = "Thunderstorm"
+        } else if id >= 521 && id <= 531 {
+            imageName = "ShowerRain"
+        } else if id >= 500 && id <= 531 {
+            imageName = "Rain"
+        } else if id >= 600 && id <= 622 {
+            imageName = "Snow"
+        } else if id == 701 {
+            imageName = "Mist"
+        } else if id == 801 {
+            imageName = "FewClouds"
+        } else if id == 802 {
+            imageName = "ScatteredClouds"
+        } else if id == 803 {
+            imageName = "BrokenClouds"
+        } else {
+            imageName = "ClearSky"
+        }
+        
+        if icon?.last == "d" {
+            return imageName + "Day"
+        } else {
+            return imageName + "Night"
+        }
+        
     }
 }
 

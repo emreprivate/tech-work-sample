@@ -16,6 +16,13 @@ class ForecastCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = .clear
     }
-
+    func setup(viewModel: ForecastElement?) {
+        if let viewModel = viewModel {
+            hourLabel.text = viewModel.dt?.timeIntervalToHourString()
+            degreeLabel.text = viewModel.main?.temp?.stringValueWithoutDecimal ?? "" + "°"
+            iconImageView.image = UIImage(named: (viewModel.weather?.first?.getWeatherImageName())!)
+        }
+    }
 }

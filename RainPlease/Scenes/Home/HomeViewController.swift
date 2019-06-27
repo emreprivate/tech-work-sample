@@ -9,6 +9,13 @@
 import UIKit
 
 class HomeViewController: UIViewController, ViewModelBindable, Alertable {
+    // MARK: - IBOutlets
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var degreeLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var summaryImageView: UIImageView!
+    @IBOutlet weak var sunriseLabel: UILabel!
+    @IBOutlet weak var sunsetLabel: UILabel!
     
     @IBOutlet weak var forecastCollectionView: UICollectionView!
     @IBOutlet weak var dailyForecastTableView: UITableView!
@@ -41,6 +48,7 @@ class HomeViewController: UIViewController, ViewModelBindable, Alertable {
     
     private func setupTableView() {
         let tableViewCell = UINib(nibName: tableViewCellName, bundle: nil)
+        dailyForecastTableView.separatorStyle = .singleLine
         dailyForecastTableView.register(tableViewCell, forCellReuseIdentifier: tableViewCellName)
         dailyForecastTableView.delegate = self
         dailyForecastTableView.dataSource = self
@@ -69,11 +77,21 @@ class HomeViewController: UIViewController, ViewModelBindable, Alertable {
                 self?.showAlertWith(message: error.localizedDescription, title: "Error")
             }
         }
+        
+        viewModel.weatherObservable.addObserver { [weak self] (weather) in
+            self?.cityNameLabel.text = weather?.name
+            self?.degreeLabel.text = (weather?.main?.temp?.stringValueWithoutDecimal ?? "") + "°"
+            self?.summaryLabel.text = weather?.weather?.first?.main
+            self?.summaryImageView.image = UIImage(named: weather?.weather?.first?.getWeatherImageName() ?? "ClearSky")
+            self?.sunriseLabel.text = "Sunrise: \(weather?.sys?.sunrise?.timeIntervalToHourString() ?? "")"
+            self?.sunsetLabel.text = "Sunset: \(weather?.sys?.sunset?.timeIntervalToHourString() ?? "")"
+        }
     }
 
     deinit {
         viewModel?.isLoadingObservable.removeObserver()
         viewModel?.errorObservable.removeObserver()
+        viewModel?.weatherObservable.removeObserver()
     }
 
 }

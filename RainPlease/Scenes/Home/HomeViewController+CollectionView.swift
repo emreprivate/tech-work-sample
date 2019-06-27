@@ -18,12 +18,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         let item = viewModel?.forecastObservable.value?.list?[indexPath.row]
-        let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let date = df.date(from: item?.dtTxt ?? "")
-        df.dateFormat = "HH:mm"
-        cell.hourLabel.text = df.string(from: date ?? Date())
-        cell.degreeLabel.text = String(format: "%0.f", item?.main?.temp ?? 0) + "°"
+        cell.setup(viewModel: item)
         return cell
     }
     
@@ -33,6 +28,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.view.frame.width / 5
-        return CGSize(width: width, height: collectionView.frame.height - 8)
+        return CGSize(width: width, height: collectionView.frame.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
+

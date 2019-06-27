@@ -19,6 +19,8 @@
 		B7A6B11322BE3E13008976C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B11122BE3E13008976C0 /* LaunchScreen.storyboard */; };
 		B7A6B11E22BE3E13008976C0 /* RainPleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B11D22BE3E13008976C0 /* RainPleaseTests.swift */; };
 		B7AF224622C39DF700BF966F /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF224522C39DF700BF966F /* HomeViewController+CollectionView.swift */; };
+		B7EF241722C4EE9A008F1B00 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF241622C4EE9A008F1B00 /* GradientView.swift */; };
+		B7EF241A22C5370D008F1B00 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF241922C5370D008F1B00 /* Double+Extension.swift */; };
 		B7EFC8F222BE635200FFA64E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8EE22BE635200FFA64E /* NetworkManager.swift */; };
 		B7EFC8F422BE635200FFA64E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8F122BE635200FFA64E /* Endpoint.swift */; };
 		B7EFC8F722BFAC4400FFA64E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8F622BFAC4400FFA64E /* Location.swift */; };
@@ -62,6 +64,8 @@
 		B7A6B11D22BE3E13008976C0 /* RainPleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainPleaseTests.swift; sourceTree = "<group>"; };
 		B7A6B11F22BE3E13008976C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7AF224522C39DF700BF966F /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		B7EF241622C4EE9A008F1B00 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		B7EF241922C5370D008F1B00 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		B7EFC8EE22BE635200FFA64E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B7EFC8F122BE635200FFA64E /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B7EFC8F622BFAC4400FFA64E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -174,6 +178,22 @@
 			path = RainPleaseTests;
 			sourceTree = "<group>";
 		};
+		B7EF241522C4EE92008F1B00 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF241622C4EE9A008F1B00 /* GradientView.swift */,
+			);
+			path = Gradient;
+			sourceTree = "<group>";
+		};
+		B7EF241822C53703008F1B00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF241922C5370D008F1B00 /* Double+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B7EFC8EC22BE635200FFA64E /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +235,7 @@
 		B7EFC90322BFB76F00FFA64E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF241822C53703008F1B00 /* Extensions */,
 				B7EFC90922BFB7C300FFA64E /* AsyncObj */,
 				B7EFC8EF22BE635200FFA64E /* API */,
 				B7EFC90422BFB78D00FFA64E /* Location */,
@@ -261,6 +282,7 @@
 		B7EFC91022BFBDF600FFA64E /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF241522C4EE92008F1B00 /* Gradient */,
 				B79F56D422C2755000C798F3 /* Indicator */,
 				B79F56CA22C2700900C798F3 /* DailyForecastCell */,
 				B79F56C922C2700100C798F3 /* ForecastCell */,
@@ -373,6 +395,7 @@
 			files = (
 				B7EFC90B22BFB7CC00FFA64E /* Observable.swift in Sources */,
 				B79F56CD22C2705200C798F3 /* DailyForecastTableViewCell.swift in Sources */,
+				B7EF241722C4EE9A008F1B00 /* GradientView.swift in Sources */,
 				B7EFC8F222BE635200FFA64E /* NetworkManager.swift in Sources */,
 				B7EFC90022BFB48000FFA64E /* ForecastJsonResponse.swift in Sources */,
 				B7AF224622C39DF700BF966F /* HomeViewController+CollectionView.swift in Sources */,
@@ -386,6 +409,7 @@
 				B7EFC90F22BFB7F800FFA64E /* HomeViewModel.swift in Sources */,
 				B7EFC90822BFB7B000FFA64E /* LocationProtocol.swift in Sources */,
 				B7EFC8F422BE635200FFA64E /* Endpoint.swift in Sources */,
+				B7EF241A22C5370D008F1B00 /* Double+Extension.swift in Sources */,
 				B79F56D222C2754000C798F3 /* ForecastCollectionViewCell.swift in Sources */,
 				B7EFC8F922BFAEC100FFA64E /* WeatherApi.swift in Sources */,
 				B7EFC90222BFB5E200FFA64E /* DailyForecastJsonResponse.swift in Sources */,

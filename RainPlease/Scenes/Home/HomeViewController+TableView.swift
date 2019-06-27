@@ -18,15 +18,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let item = viewModel?.dailyForecastObservable.value?.list?[indexPath.row]
-        
-        let date = Date(timeIntervalSince1970: TimeInterval(exactly: item?.dt ?? 0)!)
-        let df = DateFormatter()
-        df.locale = Locale.init(identifier: "tr_TR")
-        df.dateFormat = "EEEE"
-        cell.dayLabel.text = df.string(from: date)
-        cell.nightDegreeLabel.text = String(format: "%0.f", item?.temp?.night ?? 0) + "°"
-        cell.dayDegreeLabel.text = String(format: "%0.f", item?.temp?.day ?? 0) + "°"
+        cell.setup(viewModel: item)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }

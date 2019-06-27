@@ -17,7 +17,15 @@ class DailyForecastTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        self.backgroundColor = .clear
     }
-
+    
+    func setup(viewModel: DailyForecastSummary?) {
+        if let viewModel = viewModel {
+            dayLabel.text = viewModel.dt?.timeIntervalToDayString()
+            nightDegreeLabel.text = (viewModel.temp?.night?.stringValueWithoutDecimal ?? "") + "°"
+            dayDegreeLabel.text = (viewModel.temp?.day?.stringValueWithoutDecimal ?? "") + "°"
+            iconImageView.image = UIImage(named: (viewModel.weather?.first?.getWeatherImageName())!)
+        }
+    }
 }

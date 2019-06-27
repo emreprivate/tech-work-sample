@@ -27,7 +27,7 @@ struct City: Codable {
 
 // MARK: - List
 struct ForecastElement: Codable {
-    let dt: Int?
+    let dt: Double?
     let main: Main?
     let weather: [WeatherElement]?
     let clouds: Clouds?
