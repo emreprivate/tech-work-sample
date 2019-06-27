@@ -42,8 +42,13 @@ extension Endpoint {
 }
 
 extension Endpoint {
+    
+    private var apiKey: String {
+        return ProcessInfo.processInfo.environment["API_KEY"]!
+    }
+    
     private var commonQueryItems: [URLQueryItem] {
-        return [URLQueryItem(name: "key", value: "")]
+        return [URLQueryItem(name: "key", value: apiKey)]
     }
     
     var url: URL? {
