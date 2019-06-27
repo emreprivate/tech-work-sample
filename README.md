@@ -1,4 +1,15 @@
 # Work sample - iOS Application developer
+## Notes 
+### Running the Project
+
+In order to run this project, once you have cloned the repository, you will need to
+define a new environment variable in the shared scheme available.
+
+`API_KEY` should be set to the API key.
+
+### 🖥 Built With
+1. xCode 10.2.1
+1. Swift 5
 
 ## Assignment
 
