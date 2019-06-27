@@ -21,7 +21,7 @@ class ForecastCollectionViewCell: UICollectionViewCell {
     func setup(viewModel: ForecastElement?) {
         if let viewModel = viewModel {
             hourLabel.text = viewModel.dt?.timeIntervalToHourString()
-            degreeLabel.text = viewModel.main?.temp?.stringValueWithoutDecimal ?? "" + "°"
+            degreeLabel.text = (viewModel.main?.temp?.stringValueWithoutDecimal ?? "") + "°"
             iconImageView.image = UIImage(named: (viewModel.weather?.first?.getWeatherImageName())!)
         }
     }
