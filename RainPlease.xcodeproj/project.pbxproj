@@ -11,12 +11,14 @@
 		B79F56CE22C2705200C798F3 /* DailyForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79F56CC22C2705200C798F3 /* DailyForecastTableViewCell.xib */; };
 		B79F56D222C2754000C798F3 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F56D022C2754000C798F3 /* ForecastCollectionViewCell.swift */; };
 		B79F56D322C2754000C798F3 /* ForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79F56D122C2754000C798F3 /* ForecastCollectionViewCell.xib */; };
+		B79F56D622C35C8300C798F3 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79F56D522C35C8300C798F3 /* HomeViewController+TableView.swift */; };
 		B7A6B10922BE3E12008976C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B10822BE3E12008976C0 /* AppDelegate.swift */; };
 		B7A6B10B22BE3E12008976C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B10A22BE3E12008976C0 /* HomeViewController.swift */; };
 		B7A6B10E22BE3E12008976C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B10C22BE3E12008976C0 /* Main.storyboard */; };
 		B7A6B11022BE3E13008976C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B10F22BE3E13008976C0 /* Assets.xcassets */; };
 		B7A6B11322BE3E13008976C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6B11122BE3E13008976C0 /* LaunchScreen.storyboard */; };
 		B7A6B11E22BE3E13008976C0 /* RainPleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6B11D22BE3E13008976C0 /* RainPleaseTests.swift */; };
+		B7AF224622C39DF700BF966F /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AF224522C39DF700BF966F /* HomeViewController+CollectionView.swift */; };
 		B7EFC8F222BE635200FFA64E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8EE22BE635200FFA64E /* NetworkManager.swift */; };
 		B7EFC8F422BE635200FFA64E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8F122BE635200FFA64E /* Endpoint.swift */; };
 		B7EFC8F722BFAC4400FFA64E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFC8F622BFAC4400FFA64E /* Location.swift */; };
@@ -48,6 +50,7 @@
 		B79F56CC22C2705200C798F3 /* DailyForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastTableViewCell.xib; sourceTree = "<group>"; };
 		B79F56D022C2754000C798F3 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		B79F56D122C2754000C798F3 /* ForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCollectionViewCell.xib; sourceTree = "<group>"; };
+		B79F56D522C35C8300C798F3 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		B7A6B10522BE3E12008976C0 /* RainPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A6B10822BE3E12008976C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A6B10A22BE3E12008976C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		B7A6B11922BE3E13008976C0 /* RainPleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainPleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A6B11D22BE3E13008976C0 /* RainPleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainPleaseTests.swift; sourceTree = "<group>"; };
 		B7A6B11F22BE3E13008976C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7AF224522C39DF700BF966F /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		B7EFC8EE22BE635200FFA64E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B7EFC8F122BE635200FFA64E /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B7EFC8F622BFAC4400FFA64E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 		B7EFC8FA22BFAED300FFA64E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B7EFC90722BFB7B000FFA64E /* LocationProtocol.swift */,
 				B7EFC91322BFBEB500FFA64E /* ViewModelBindable.swift */,
 				B7EFC91522BFC01500FFA64E /* Alertable.swift */,
 			);
@@ -222,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				B7EFC90522BFB79A00FFA64E /* LocationManager.swift */,
-				B7EFC90722BFB7B000FFA64E /* LocationProtocol.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -247,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				B7A6B10A22BE3E12008976C0 /* HomeViewController.swift */,
+				B7AF224522C39DF700BF966F /* HomeViewController+CollectionView.swift */,
+				B79F56D522C35C8300C798F3 /* HomeViewController+TableView.swift */,
 				B7EFC90E22BFB7F800FFA64E /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -369,6 +375,7 @@
 				B79F56CD22C2705200C798F3 /* DailyForecastTableViewCell.swift in Sources */,
 				B7EFC8F222BE635200FFA64E /* NetworkManager.swift in Sources */,
 				B7EFC90022BFB48000FFA64E /* ForecastJsonResponse.swift in Sources */,
+				B7AF224622C39DF700BF966F /* HomeViewController+CollectionView.swift in Sources */,
 				B7EFC91222BFBE0400FFA64E /* IndicatorView.swift in Sources */,
 				B7EFC90622BFB79A00FFA64E /* LocationManager.swift in Sources */,
 				B7A6B10B22BE3E12008976C0 /* HomeViewController.swift in Sources */,
@@ -383,6 +390,7 @@
 				B7EFC8F922BFAEC100FFA64E /* WeatherApi.swift in Sources */,
 				B7EFC90222BFB5E200FFA64E /* DailyForecastJsonResponse.swift in Sources */,
 				B7EFC91422BFBEB500FFA64E /* ViewModelBindable.swift in Sources */,
+				B79F56D622C35C8300C798F3 /* HomeViewController+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

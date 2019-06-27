@@ -10,24 +10,47 @@ import UIKit
 
 class HomeViewController: UIViewController, ViewModelBindable, Alertable {
     
+    @IBOutlet weak var forecastCollectionView: UICollectionView!
+    @IBOutlet weak var dailyForecastTableView: UITableView!
     var indicatorView: IndicatorView?
     
-    typealias ViewModel = HomeViewModel
+    // MARK: - Properties
     var viewModel: HomeViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 return
             }
-            
-            // Setup View Model
             setupViewModel(with: viewModel)
         }
     }
+    let tableViewCellName = "DailyForecastTableViewCell"
+    let collectionViewCellName = "ForecastCollectionViewCell"
+    // MARK: -
 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = HomeViewModel(weatherApi: WeatherApi(networkManager: NetworkManager()), locationService: LocationManager())
+        arrangeComponents()
+    }
+    
+    private func arrangeComponents() {
         indicatorView = IndicatorView(view: self.view)
+        setupTableView()
+        setupCollectionView()
+    }
+    
+    private func setupTableView() {
+        let tableViewCell = UINib(nibName: tableViewCellName, bundle: nil)
+        dailyForecastTableView.register(tableViewCell, forCellReuseIdentifier: tableViewCellName)
+        dailyForecastTableView.delegate = self
+        dailyForecastTableView.dataSource = self
+    }
+    
+    private func setupCollectionView() {
+        let collectionViewCell = UINib(nibName: collectionViewCellName, bundle: nil)
+        forecastCollectionView.register(collectionViewCell, forCellWithReuseIdentifier: collectionViewCellName)
+        forecastCollectionView.delegate = self
+        forecastCollectionView.dataSource = self
     }
     
     func setupViewModel(with viewModel: HomeViewModel) {
@@ -36,6 +59,8 @@ class HomeViewController: UIViewController, ViewModelBindable, Alertable {
                 self?.indicatorView?.show()
             } else {
                 self?.indicatorView?.hide()
+                self?.dailyForecastTableView.reloadData()
+                self?.forecastCollectionView.reloadData()
             }
         }
         
@@ -52,4 +77,3 @@ class HomeViewController: UIViewController, ViewModelBindable, Alertable {
     }
 
 }
-

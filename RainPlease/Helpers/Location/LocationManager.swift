@@ -81,7 +81,6 @@ extension LocationManager: CLLocationManagerDelegate {
 fileprivate extension Location {
     
     // MARK: - Initialization
-    
     init(location: CLLocation) {
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude

@@ -19,7 +19,7 @@ struct DailyForecastJsonResponse: Codable {
 
 // MARK: - List
 struct DailyForecastSummary: Codable {
-    let dt: Int?
+    let dt: Double?
     let temp: Temp?
     let pressure: Double?
     let humidity: Int?

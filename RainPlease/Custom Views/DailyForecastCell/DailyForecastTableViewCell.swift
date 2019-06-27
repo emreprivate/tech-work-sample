@@ -20,5 +20,4 @@ class DailyForecastTableViewCell: UITableViewCell {
 
     }
 
-    
 }
